@@ -1,3 +1,16 @@
-<p>
-  create-authors works!
-</p>
+<div class="container">
+  <h3>Añade un autor</h3>
+  <form [formGroup]="authorsForm" (ngSubmit)="onSubmit()">
+    <label>
+      Nombre:
+      <input type="text" formControlName="name">
+    </label>
+    <label>
+      Nacionalidad:
+      <input type="text" formControlName="nationality">
+    </label>
+    <button class="button" type="submit">Guardar</button>
+
+  </form>
+
+</div>
