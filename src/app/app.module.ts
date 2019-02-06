@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { CreateAuthorsComponent } from './components/create-authors/create-authors.component';
 import { ListAuthorsComponent } from './components/list-authors/list-authors.component';
 
+import { AuthorsService } from './services/authors.service';
+
 const routes: Routes = [
   { path: '', component: CreateAuthorsComponent },
   { path: 'authorslist', component: ListAuthorsComponent}
@@ -26,7 +28,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
